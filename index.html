@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>拆砖建房大行动</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- <base href="/wboll_game/static/game/lianjia/"> -->
+    <!-- <base href="/prod/static/game/lianjia/"> -->
+    <!-- <base href="http://st.wboll.com/static/wboll_game/static/game/lianjia/"> -->
+	<!-- 	<base href="http://getstatic.wboll.com/static/game/lianjia/">-->
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/play68_sdk.js"></script>
+	<script language="javascript" type="text/javascript" src="js/play68.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+
+</head>
+		<!--===============================  游戏加载页  ==============================-->
+		<div id="loading" class="bg loading none">
+			<img src="img/loading.gif" />
+		</div>
+
+		<!--===============================  二维码页  ==============================-->
+		<div id="erWeima" class="bg erweima">
+			<!--烟花特效-->
+			<div class="yanhuaGroup">
+				<div class="yanhua yanhua1 m-zoomBig1"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua2 m-zoomBig2"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua3 m-zoomBig3"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua4 m-zoomBig4"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua5 m-zoomBig5"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua6 m-zoomBig6"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua7 m-zoomBig4"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua8 m-zoomBig2"><img src="img/yanhua2.png" /></div>
+			</div>
+			<!--二维码显示-->
+			<div id="codeImg" class="code-img">
+				<img src="img/erweima.jpg" />
+			</div>
+		</div>
+
+		<!--===============================  游戏规则页  ==============================-->
+		<div id="gameRule" class="bg gameRule none">
+			<!--关闭按钮-->
+			<span id="ruleClose" class="btn-close"></span>
+		</div>
+
+		<!--===============================  游戏开始页  ==============================-->
+		<div id="play" class="play bg gameStart ">
+			<!--烟花特效-->
+			<div class="yanhuaGroup">
+				<div class="yanhua yanhua1 m-zoomBig1"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua2 m-zoomBig2"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua3 m-zoomBig3"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua44 m-zoomBig4"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua6 m-zoomBig6"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua7 m-zoomBig4"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua8 m-zoomBig2"><img src="img/yanhua2.png" /></div>
+			</div>
+			<!--游戏开始按钮-->
+			<div id="btn-gameStart" class="btn-gamestart"></div>
+			<!--弹出机会已经用完对话框-->
+			<div id="chanceOver" class="bg chanceOver none">
+				<!--提示信息一-->
+				<div id="chanceText1" class="tipText chanceText1">
+					<p>对不起，你的机会已用完！</p>
+				</div>
+				<!--关闭按钮-->
+				<span id="chanceClose" class="chanceClose"></span>
+			</div>
+		</div>
+
+		<!--===============================  游戏页  ==============================-->
+		<div id="game">
+			<!--烟花特效-->
+			<div class="yanhuaGroup gameYanhua">
+				<div class="yanhua yanhua1 m-zoomBig1"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua22 m-zoomBig2"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua33 m-zoomBig3"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua45 m-zoomBig4"><img src="img/yanhua2.png" /></div>
+				<div class="yanhua yanhua66 m-zoomBig6"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua7 m-zoomBig4"><img src="img/yanhua1.png" /></div>
+				<div class="yanhua yanhua88 m-zoomBig2"><img src="img/yanhua2.png" /></div>
+			</div>
+            <canvas id="canvas"></canvas>
+			<div id="shade" class="shade">
+				<div class="mask">
+					<img class="btn-left" src="img/btn-left.png" />
+					<p>
+						左右点击，躲避小偷
+					</p>
+					<img class="btn-right" src="img/btn-right.png" />
+				</div>
+			</div>
+        </div>
+		<div id="orientate">
+            <img src="img/background.png" />
+        </div>
+
+		<!--===============================  游戏结束结果页  ==============================-->
+		<div id="gameOver" class="bg gameOver none">
+			<!--奖品一-->
+			<div id="gemeReust1" class="gameResult gameResult1 none">
+				<!--极光动画-->
+				<div class="jiguang"></div>
+				<!--奖励-->
+				<div class="getPrize">
+					<img class="result" src="img/house1.png" />
+				</div>
+				<!--提示信息-->
+				<div class="prizeTips">
+					<p>这位小猴砸，你抢了<span class="brickCount">120</span>块砖头，竟然够盖豪华大别墅一栋，<a href="javascript:void(0)" class="color4aa429">链家网</a>送你<a href="javascript:void(0)" class="color4aa429">筑房红包</a>一个，拿去买地！</p>
+				</div>
+				<!--按钮-->
+				<div class="buttons">
+					<!--再来一次-->
+					<span class="btns btnAgain"><img src="img/btn-again.png" /></span>
+					<!--立即领取-->
+					<span class="btns btnGetnow"><img src="img/btn-getnow.png" /></span>
+				</div>
+			</div>
+
+			<!--奖品二-->
+			<div id="gemeReust2" class="gameResult gameResult2 none">
+				<!--极光动画-->
+				<div class="jiguang"></div>
+				<!--奖励-->
+				<div class="getPrize getPrize1">
+					<img class="result" src="img/house2.png" />
+				</div>
+				<!--提示信息-->
+				<div class="prizeTips">
+					<p>
+						这位小猴砸，你抢了<span class="brickCount">120</span>块砖，只能盖个小平房哦，<a href="javascript:void(0)" class="color4aa429">链家网</a>表示，对于这么点追求的你稍有小失望，再努力一下下，表现好就送你<a href="javascript:void(0)" class="color4aa429">筑房红包</a>，再来一次，看猴你呦！
+					</p>
+				</div>
+				<!--按钮-->
+				<div class="buttons">
+					<!--再来一次-->
+					<span class="btns btnAgain"><img src="img/btn-again.png" /></span>
+					<!--立即领取-->
+					<span class="btns btnGetnow"><img src="img/btn-getnow.png" /></span>
+				</div>
+			</div>
+
+			<!--奖品三-->
+			<div id="gemeReust3" class="gameResult gameResult3 none">
+				<!--极光动画-->
+				<div class="jiguang"></div>
+				<!--奖励-->
+				<div class="getPrize">
+					<img class="result" src="img/house3.png" />
+				</div>
+				<!--提示信息-->
+				<div class="prizeTips">
+					<p>
+						这位小猴砸，你抢了<span class="brickCount">xx</span>块砖，只能盖一堵墙哦，距离<a href="javascript:void(0)" class="color4aa429">链家网</a>发放的<a href="javascript:void(0)" class="color4aa429">筑房红包</a>还有一步之遥，要眼睁睁地看它落入他人之手？迅猛再来一次！
+					</p>
+				</div>
+				<!--按钮-->
+				<div class="buttons">
+					<!--再来一次-->
+					<span class="btns btnAgain"><img src="img/btn-again.png" /></span>
+					<!--分享好友-->
+					<span class="btns btnSharefriend"><img src="img/btn-shareFriend.png" /></span>
+				</div>
+			</div>
+
+			<!--奖品四-->
+			<div id="gemeReust4" class="gameResult gameResult4 none">
+				<!--极光动画-->
+				<div class="jiguang"></div>
+				<!--奖励-->
+				<div class="getPrize getPrize2">
+					<img class="result" src="img/house4.png" />
+				</div>
+				<!--提示信息-->
+				<div class="prizeTips">
+					<p>
+						这位小猴砸，你抢了<span class="brickCount">xx</span>块砖，连打个地基都不够啊，<a href="javascript:void(0)" class="color4aa429">链家网</a>的<a href="javascript:void(0)" class="color4aa429">筑房红包</a>正在前方不远处向你招手，再接再厉再来一次可好？
+					</p>
+				</div>
+				<!--按钮-->
+				<div class="buttons">
+					<!--再来一次-->
+					<span class="btns btnAgain"><img src="img/btn-again.png" /></span>
+					<!--分享好友-->
+					<span class="btns btnSharefriend"><img src="img/btn-shareFriend.png" /></span>
+				</div>
+			</div>
+		</div>
+
+		<!--===============================  信息提示页  ==============================-->
+		<div id="resultTips" class="bg resultTips none">
+			<!--提示信息一-->
+			<div id="tipText1" class="tipText tipText1 none">
+				<p>这位小猴砸，好东西就要分享给好朋友哦，赶紧喊朋友一起来吧，自己也可以得到一次机会哦！</p>
+			</div>
+			<!--提示信息二-->
+			<div id="tipText2" class="tipText tipText2 none">
+				<p>恭喜您，链家网筑家红包已发放，稍后请注意服务通知！</p>
+			</div>
+			<!--喊朋友再来一次 按钮-->
+			<span id="btnCallfriend" class="btn-callfriend"><img src="img/btn-callfriend.png" /></span>
+			<!--关闭按钮-->
+			<span id="btnFriendclose" class="friend-close"></span>
+		</div>
+
+		<!--===============================  红包已抢完提示页  ==============================-->
+		<div id="hongbao0" class="bg hongbao0 none">
+			<div class="redbagText">
+				<p class="hongbaoCont">这位小猴砸，你来晚了，红包已经被抢完了，请期待下一轮红包哦！</p>
+				<!--分享好友 按钮-->
+				<span class="btns btnSharefriend btnhongba"><img src="img/btn-shareFriend.png" /></span>
+			</div>
+		</div>
+
+		<!--===============================  好友分享页  ==============================-->
+		<div id="shareFriend" class="bg shareFriend none">
+			<img src="img/share-bg.png" />
+		</div>
+
+		<script type="text/javascript" src="js/lianjia.js"></script>
+</body>
+</html>

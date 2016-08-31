@@ -1,0 +1,570 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+div {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+span{
+    margin:0;
+    padding:0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+ol {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+li {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+dl, dt, dd {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+img {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+p {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+form {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+input, select, textarea {
+    outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    border-radius: 0;
+    border: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.text-c{
+    text-align: center;
+}
+.text-r{
+    text-align: right;
+}
+.mt-10{
+    margin-top:10px;
+}
+.m-5{
+    margin-bottom:5px;
+}
+.mb-10{
+    margin-bottom:10px;
+}
+.mb-15{
+    margin-bottom:15px;
+}
+.clearfloat:after {
+    visibility: hidden;
+    content: "";
+    font-size: 0px;
+    clear: both;
+    height: 0px;
+    display: block;
+}
+.clearfloat {
+    zoom: 1
+}
+.clear {
+    clear: both;
+    font-size: 0px;
+    line-height: 0;
+    height: 0;
+    margin: 0px;
+    padding: 0px;
+}
+.none{
+    display:none;
+}
+*::-webkit-scrollbar{width:0px; height:0px;}
+
+.bg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    overflow-y:auto;
+}
+/*加载页*/
+.loading{
+    z-index:99999;
+}
+.loading>img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+/*二维码页*/
+.erweima{
+    background:url(../img/erweima-bg1.jpg) no-repeat left top;
+    background-size:100% 100%;
+    z-index:10001;
+}
+.code-img{
+    width:39%;
+    height:24%;
+    position:absolute;
+    left:30%;
+    bottom:28%;
+}
+.code-img>img{
+    display:block;
+    width:100%;
+}
+.yanhuaGroup{
+    width:100%;
+    height:50%;
+    position:relative;
+}
+.yanhuaGroup{
+    height:45%;
+}
+.yanhua>img{
+    display:block;
+    width:100%;
+}
+.yanhua{
+    position:absolute;
+}
+.yanhua1{
+    width:16%;
+    height:23%;
+    left:1%;
+    top:3%;
+}
+.yanhua2{
+    width:15%;
+    height:20%;
+    left:1%;
+    bottom:3%;
+}
+.yanhua3{
+    width:19%;
+    height:21%;
+    left:36%;
+    top:12%;
+}
+.yanhua4{
+    width:23%;
+    height:25%;
+    right:4%;
+    bottom:28%;
+}
+.yanhua5{
+    width:18%;
+    height:23%;
+    left:9%;
+    top:28%;
+}
+.yanhua6{
+    width:18%;
+    height:15%;
+    right:20%;
+    top:20%;
+}
+.yanhua7{
+    width:16%;
+    height:19%;
+    left:20%;
+    top:15%;
+}
+.yanhua8{
+    width:16%;
+    height:19%;
+    right:5%;
+    top:21%;
+}
+.yanhua9{
+    width:18%;
+    height:23%;
+    left:35%;
+    bottom:21%;
+}
+.yanhua22 {
+    width: 15%;
+    height: 20%;
+    left: 1%;
+    bottom: 28%;
+}
+.yanhua33 {
+    width: 19%;
+    height: 21%;
+    left: 17%;
+    top: 40%;
+}
+.yanhua44{
+    width:23%;
+    height:25%;
+    right:21%;
+    bottom:7%;
+}
+.yanhua45 {
+    width: 23%;
+    height: 25%;
+    right: 8%;
+    bottom: 7%;
+}
+.yanhua66 {
+    width: 18%;
+    height: 15%;
+    right: 17%;
+    top: 24%;
+}
+.yanhua88 {
+    width: 16%;
+    height: 19%;
+    right: 3%;
+    top: 33%;
+}
+
+/*游戏规则页*/
+.gameRule{
+    background:url(../img/gameRule.png) no-repeat left top;
+    background-size:100% 100%;
+    z-index:10002;
+}
+.btn-close{
+    display:block;
+    width:10%;
+    height:5%;
+    position:absolute;
+    right:10%;
+    top:12%;
+}
+/*游戏开始页*/
+.gameStart{
+    background:url(../img/gamestart-bg.jpg) no-repeat left top;
+    background-size:100% 100%;
+    z-index:1003;
+    /*display:none;*/
+}
+.btn-gamestart{
+    width:33%;
+    height:6%;
+    position:absolute;
+    left:32%;
+    bottom:6%;
+}
+
+/*游戏进行页*/
+.gameYanhua{
+    z-index:99999;
+}
+.shade{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:10000;
+}
+.mask{
+    width:100%;
+    height:120px;
+    position:fixed;
+    left:0;
+    bottom:0;
+    background:rgba(255,255,255,0.5);
+}
+.mask>p{
+    line-height:120px;
+    text-align:center;
+    color:#00480b;
+    overflow:hidden;
+    position:relative;
+}
+.btn-left{
+    width:28px;
+    height:52px;
+    position:absolute;
+    left:18%;
+    top:20%;
+    -webkit-animation:pointer 1s 1s infinite;
+    animation:pointer 1s 1s infinite;
+}
+.btn-right{
+    width:28px;
+    height:52px;
+    position:absolute;
+    right:18%;
+    top:20%;
+    -webkit-animation:pointer 1s 1s infinite;
+    animation:pointer 1s 1s infinite;
+}
+.chanceText1>p{
+    text-align:center!important;
+}
+
+/*游戏结束结果页*/
+.gameOver{
+    background:rgba(0,0,0,0.9);
+    z-index:1005;
+}
+.gameResult{
+    width:90%;
+    height:80%;
+    position:absolute;
+    left:5%;
+    top:5%;
+}
+.jiguang{
+    width:100%;
+    height:60%;
+    /*margin:0 5%;*/
+    background:url("../img/jiguang.png") no-repeat left top;
+    background-size:100% 100%;
+    animation:wrenching 3s linear infinite;
+    -webkit-animation:wrenching 3s linear infinite;
+}
+.getPrize{
+    width:60%;
+    position:absolute;
+    left:20%;
+    top:10%;
+}
+.getPrize1{
+    width:44%;
+    left:28%;
+}
+.getPrize2{
+    width:44%;
+    left:28%;
+    top:23%;
+}
+.result{
+    display:block;
+    width:100%;
+    height:auto;
+}
+.prizeTips{
+    width:100%;
+    height:auto;
+    padding-bottom:5%;
+}
+.prizeTips p{
+    width:90%;
+    margin:0 auto;
+    line-height:24px;
+    color:#fff;
+}
+.color4aa429{
+    color:#4aa429;
+}
+.buttons{
+    width:100%;
+    height:40px;
+    text-align:center;
+}
+.btns{
+    display:inline-block;
+    width:35%;
+    margin:0 2%;
+}
+.btns>img{
+    display:inline-block;
+    width:100%;
+}
+
+/*信息提示页*/
+.resultTips,.chanceOver{
+    background:url("../img/alert-bg.png") no-repeat left top;
+    background-size:100% 100%;
+    z-index:1006;
+}
+.tipText{
+    width:70%;
+    height:20%;
+    position:absolute;
+    left:15%;
+    bottom:32%;
+}
+.tipText p{
+    line-height:24px;
+    text-align:justify;
+    color:#fff;
+}
+.btn-callfriend{
+    width:40%;
+    display:block;
+    position:absolute;
+    left:30%;
+    bottom:18%;
+}
+.btn-callfriend>img{
+    display:block;
+    width:100%;
+}
+.friend-close,.chanceClose{
+    display:block;
+    width:10%;
+    height:5%;
+    position:absolute;
+    right:10%;
+    top:16%;
+}
+.shareFriend{
+/*    background:url("../img/share-bg.png") no-repeat left top;
+    background-size:100% 100%;*/
+    z-index:1007;
+}
+.shareFriend>img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+/*红包已领完*/
+.hongbao0{
+    background:url("../img/hongbao0.png") no-repeat left top;
+    background-size:100% 100%;
+    z-index:1006;
+}
+.redbagText{
+    width:70%;
+    height:30%;
+    position:fixed;
+    left:15%;
+    bottom:20%;
+}
+.hongbaoCont{
+    line-height:24px;
+    font-size:15px;
+    color:#ffe7ba;
+}
+.hongbaoBtn{
+    width:100%;
+    height:40px;
+    margin-top:10%;
+}
+.btnhongba{
+    width:45%;
+    margin:15% auto;
+    display:block;
+}
+
+
+/*图片旋转动画*/
+@-webkit-keyframes wrenching{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@keyframes wrenching{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+/*放大缩小*/
+@-webkit-keyframes pointer {
+    0%{
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    50%{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100%{
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+@keyframes pointer {
+    0%{
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    50%{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100%{
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+/*图片从小变大*/
+.m-zoomBig1 {-webkit-animation:m-zoomBig 1.5s linear 0s infinite; animation:m-zoomBig 1.5s linear 0s infinite; opacity: 0;}
+.m-zoomBig2 {-webkit-animation:m-zoomBig 1.5s linear 0.3s infinite; animation:m-zoomBig 1.5s linear 0.3s infinite; opacity: 0;}
+.m-zoomBig3 {-webkit-animation:m-zoomBig 2s linear 0.5s infinite; animation:m-zoomBig 2s linear 0.5s infinite; opacity: 0;}
+.m-zoomBig4 {-webkit-animation:m-zoomBig 1.5s linear 0.7s infinite; animation:m-zoomBig 1.5s linear 0.7s infinite; opacity: 0;}
+.m-zoomBig5 {-webkit-animation:m-zoomBig 1.5s linear 0.8s infinite; animation:m-zoomBig 1.5s linear 0.8s infinite; opacity: 0;}
+.m-zoomBig6 {-webkit-animation:m-zoomBig 2.5s linear 0.9s infinite; animation:m-zoomBig 2.5s linear 0.9s infinite; opacity: 0;}
+@-webkit-keyframes m-zoomBig{
+    0%{
+        transform:translate(0,250%) scale(0.1,0.1);-webkit-transform:translate(0,250%) scale(0.1,0.1);opacity: 0;
+         }
+    40%{
+        transform:translate(0,0) scale(0.1,0.1);-webkit-transform:translate(0,0) scale(0.1,0.1);opacity: 1;
+    }
+    100%{
+        transform:translate(0,0) scale(1,1);-webkit-transform:translate(0,0) scale(1,1);opacity: 1;
+    }
+}
+@keyframes m-zoomBig{
+    0%{
+        transform:translate(0,250%) scale(0.1,0.1);-webkit-transform:translate(0,250%) scale(0.1,0.1);opacity: 0;
+    }
+    40%{
+        transform:translate(0,0) scale(0.1,0.1);-webkit-transform:translate(0,0) scale(0.1,0.1);opacity: 1;
+    }
+    100%{
+        transform:translate(0,0) scale(1,1);-webkit-transform:translate(0,0) scale(1,1);opacity: 1;
+    }
+}
